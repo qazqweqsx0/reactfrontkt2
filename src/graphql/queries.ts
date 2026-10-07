@@ -9,6 +9,7 @@ interface Category {
 interface Task {
     id: number;
     title: string;
+    description: string;
     isCompleted: boolean;
     category: Category
 }
@@ -23,6 +24,7 @@ export const GET_TASKS: TypedDocumentNode<AllTasksData> = gql`
             id
             title
             isCompleted
+            description
             category {
               name
               color

@@ -20,13 +20,13 @@ function TaskList() {
     if (error) return <p>Ошибка: {error.message}</p>;
 
     return (
-        <div>
-            <p>Задачи</p>
-            {data?.allTasks.map(item => <div>
+        <div className='tasks'>
+            {data?.allTasks.map(item => <div className='task'>
                 <p>{item.title}</p>
+                <p>{item.description}</p>
                 <p style={{color: item.category.color}}>{item.category.name}</p>
                 <p style={{color: item.isCompleted ? "green" : "red"}}>{item.isCompleted ? "Выполнено" : "Не выполнено"}</p>
-                <button onClick={() => handleComplete(item.id)}>Выполнить задачу</button>
+                {item.isCompleted ? "" : <button onClick={() => handleComplete(item.id)}>Выполнить задачу</button>}
             </div>)}
         </div>
     )

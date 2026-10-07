@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.tasks {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.task {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 4px;
+    border-radius: 16px;
+    border: 2px solid #000000;
+}
+
+.task_form {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 8px;
+    border-radius: 16px;
+    border: 2px solid #000000;
+}
+
+.task_form input {
+    padding: 3px;
+}
